@@ -20,16 +20,16 @@ public class PushController {
     @ResponseBody
     @PostMapping("/pushComment")
     public String pushComment(String title,String content,String[] clientids){
-        try {
+            try {
 
-            String info = pushService.pushComment(title,content,clientids);
-       //     logger.info("推送信息结果："+info);
-        }catch (Exception e){
-            logger.error(e.getMessage());
-            return "fail";
+                String info = pushService.pushComment(title,content,clientids);
+                logger.info("推送信息结果："+info);
+            }catch (Exception e){
+                logger.error(e.getMessage());
+                return "fail";
 
-        }
-        return "success";
+            }
+            return "success";
     }
 
     @ResponseBody
