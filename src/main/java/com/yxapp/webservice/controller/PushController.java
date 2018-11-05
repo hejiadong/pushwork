@@ -24,6 +24,7 @@ public class PushController {
 
                 String info = pushService.pushComment(title,content,clientids);
                 logger.info("推送信息结果："+info);
+                //control
             }catch (Exception e){
                 logger.error(e.getMessage());
                 return "fail";
