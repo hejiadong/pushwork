@@ -23,7 +23,7 @@ public class PushController {
         try {
 
             String info = pushService.pushComment(title,content,clientids);
-            logger.info("推送信息结果："+info);
+       //     logger.info("推送信息结果："+info);
         }catch (Exception e){
             logger.error(e.getMessage());
             return "fail";
